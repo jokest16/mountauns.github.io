@@ -1,0 +1,398 @@
+@import "bourbon"
+@import "vars.sass"
+@import "app/libs/magnific-popup/dist/magnific-popup"
+*::-webkit-input-placeholder
+  color: $grey
+  opacity: 1
+
+*:-moz-placeholder
+  color: #666
+  opacity: 1
+
+*::-moz-placeholder
+  color: #666
+  opacity: 1
+
+*:-ms-input-placeholder
+  color: #666
+  opacity: 1
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+  color: #666
+body input:required:valid,
+body textarea:required:valid
+  color: #666
+
+//Custom Styles Here
+.about
+  background: url(/img/about-bg.jpg)
+  width: 100%
+  height: auto
+  padding-bottom: 150px
+  position: relative
+  p
+    padding-bottom: 10px
+  .vave
+    color: #b5b4b4
+    padding:
+      top: 190px
+  span
+    color: #b5b4b4
+  .button
+    padding: 15px 28px
+  .img-1
+    position: absolute
+    top: 235px
+    z-index: 2
+  .img-2
+    position: absolute
+    left: 90px
+    top: -25px
+    img
+      width: 800px
+.journal
+  .vave
+    margin-top: 65px
+    text-align: center
+  .slide-togle
+    margin-bottom: 80px
+    .col-md-4
+      padding: 0
+      width: 380px
+    h5
+      color: $blue
+      text-transform: uppercase
+      font-family: "OpenSansBold",sans-serif
+    h4
+      text-transform: uppercase
+      font-family: "OpenSansBold",sans-serif
+    h5,h4
+      text-align: center
+    .img
+      min-height: 380px
+      width: 100%
+      position: relative
+      &:hover
+        .img-hover
+          opacity: 1
+      &-hover
+        min-height: 81px
+        min-width: 81px
+        z-index: 1
+        position: absolute
+        top: 40%
+        left: 42.3%
+        opacity: 0
+        transition: opacity 0.5s ease
+    .toggle-item
+      text-align: center
+      display: none
+      position: relative
+    .number
+      color: $grey
+      font-family: "OpenSansItalic",sans-serif
+      font-style: italic
+    .triangle
+      border: solid 13px transparent
+      border-bottom: 13px solid white
+      width: 0
+      height: 0
+      position: absolute
+      top: -46px
+      right: 0
+.offer
+  background: url(/img/ofter-bg.jpg) no-repeat
+  padding-top: 130px
+  padding-bottom: 239px
+  form
+    .form-order
+      position: relative
+      display: flex
+      flex-flow: row nowrap
+      input
+        border: none
+        &[type="tel"]
+          padding: 14px 31px
+          width: 100%
+          border-top-right-radius: 5px
+          border-bottom-right-radius: 5px
+          color: $grey
+          background-image: url(/img/shape.png)
+          background-repeat: no-repeat
+          background-position: 3%
+        &[type='text']
+          padding: 14px 21px
+          border-top-left-radius: 5px
+          border-bottom-left-radius: 5px
+          color: $grey
+        &[type="submit"]
+          position: absolute
+          bottom: 5px
+          right: 6px
+          padding: 10px 40px
+  .blue-text
+    color: $blue
+    .fa
+      font-size: em(25px)
+      margin-right: 10px
+    p
+      font-size: em(16px)
+      vertical-align: middle
+      font-family: "OpenSansRegular",sans-serif
+.scheme
+  padding:
+    top: 60px
+    bottom: 60px
+  position: relative
+  .vave
+    text-align: center
+    margin-bottom: 60px
+  .line
+    background: url(/img/doted-line.png)
+    height: 2px
+    width: 835px
+    position: relative
+    right: -140px
+    bottom: -25px
+    z-index: 0
+    &-small
+      background: url(/img/doted-line.png)
+      min-height: 2px
+      width: 150px
+      transform: rotate(90deg)
+      position: relative
+      top: -30px
+      left: 32px
+      z-index: -1
+  .item
+    text-align: center
+    h3
+      font-family: "OpenSansBold",sans-serif
+      margin-right: 16px
+    p
+      margin-right: 16px
+      color: $grey
+    &-circle
+      background-color: lighten($grey, 25%)
+      min-height: 200px
+      width: 80%
+      border-radius: 105px
+      margin:
+        left: 16px
+        bottom: 50px
+      position: relative
+      &-polygon
+        position: absolute
+        top: 40px
+        left: 43px
+        min-height: 140px
+        min-width: 130px
+        background-color: transparent
+        background: url("/img/polygon.png") no-repeat
+        z-index: 5
+        &:hover
+          transform: rotate(360deg)
+          transition: transform 10s ease
+        img
+          position: absolute
+          top: 30%
+          left: 34.7%
+    .numbers
+      z-index: 2
+      border: 3px solid $blue
+      border-radius: 100px
+      padding: 10px 18px
+      color: $blue
+      font-family: "OpenSansBold",sans-serif
+      width: 50px
+      background-color: #fff
+      margin-bottom: 100px
+
+.travel
+  background: url(/img/travel-bg.jpg) no-repeat -10% -3.5%
+  .col-md-3
+    width: 20%
+  .vave
+    text-align: center
+    margin-bottom: 60px
+  .item
+    margin-bottom: 475px
+    &-star
+      color: #fff
+      padding:
+        top: 10px
+        left: 20px
+        bottom: 110px
+      .fa
+        &-star
+          transition: all 0.5s ease
+          &:hover
+            -webkit-filter: drop-shadow(2px 2px 20px black)
+            color: yellow
+    &-text
+      padding:
+        left: 20px
+        bottom: 53px
+      color: #fff
+      font-family: "OpenSansRegular",sans-serif
+      .h3
+        font-size: em(26px)
+    &-price
+      width: 200px
+      padding: 20px
+      color: #fff
+      display: flex
+      flex-flow: row nowrap
+      .first
+        font-family: "OpenSansRegular",sans-serif
+        text-decoration: line-through
+      .second
+        margin-left: 50%
+        font-family: "OpenSansExtraBold",sans-serif
+        &:hover
+          transform: scale(1.1)
+          transition: transform 0.5s ease
+.galerey
+  padding:
+    top: 60px
+    bottom: 60px
+  .vave
+    text-align: center
+  .masonry-container
+    .item-mos
+      padding:
+        left: 5px
+        bottom: 15px
+        width: 100%
+      cursor: pointer
+      &:hover
+        &::before
+          opacity: .4
+          transition: opacity 0.7s ease
+      &::before
+        content: ''
+        background-color: $blue
+        z-index: 3
+        position: absolute
+        top: 0
+        left: 4px
+        width: 93%
+        height: 95.1%
+        opacity: 0
+        border-radius: 5px
+      img
+        max-width: 100%
+      &:hover
+        transform: scale(1.1)
+        transition: transform 0.7s ease
+        z-index: 2
+.logos
+  background-color: lighten($grey, 30%)
+  margin-bottom: 60px
+  .logos-row
+    display: flex
+    flex-flow: row nowrap
+    padding:
+      top: 60px
+      bottom: 60px
+    .logos-item
+      background: url(/img/gallerey/logos-sprite.png) no-repeat
+      padding: 20px 43px
+      transition: all 1.5s ease
+      &:hover
+        transform: scale(1.3)
+    .logos-item:first-child
+      margin-right: 130px
+.contacts
+  position: relative
+  .vave
+    text-align: center
+  .comment
+    color: lighten($grey, 10%)
+    padding:
+      bottom: 275px
+    width: 100%
+    background: url(/img/footer-img/comment-bg.png) no-repeat 0% 12%
+    .fa
+      font-size: 35px
+    .author
+      display: flex
+      align-items: center
+      &-img
+        padding: 33px
+        margin-right: 15px
+      &-person
+        color: $blue
+  .send
+    position: absolute
+    top: 150px
+    background: url(/img/footer-img/last-bg.png) no-repeat
+    width: 100%
+    padding-bottom: 164px
+    form
+      margin-top: 330px
+      background: url(/img/footer-img/send-form-bg.png) no-repeat 7%
+      background-size: cover
+      border-radius: 10px
+      width: 100%
+      display: flex
+      flex-flow: column
+      padding: 30px 30px
+      h3
+        text-align: center
+        color: $blue
+        font-family: "OpenSansBold",sans-serif
+        font-size: em(40px)
+        margin:
+          top: 10px
+          bottom: 0
+          left: 0
+          right: 0
+        text-transform: uppercase
+      p
+        margin: 0 auto
+        text-align: center
+        font-size: em(18px)
+      input
+        margin:
+          bottom: 15px
+          top: 10px
+        padding: 16px
+        border-radius: 5px
+        color: $grey
+        border: NONE
+        &[type="button"]
+          background: $blue
+          margin-bottom: 20px
+          color: #fff
+          text-transform: uppercase
+          font-size: em(19px)
+          font-family: "OpenSansBold",sans-serif
+footer
+  .social
+    margin-top: 531px
+    background: url(/img/footer-img/social-bg.png)
+    background-size: cover
+    z-index: 6
+    padding: 15px 0px
+    p
+      color: $aqua
+      opacity: .9
+      font-size: em(17px)
+    &-btn
+      padding: 20px
+      width: 10px
+      display: inline-block
+      margin-top: 10px
+    .phone
+      color: $aqua
+      font-family: "OpenSansExtraBold", sans-serif
+      font-size: em(27px)
+.hidden
+  //ALWAYS END
+@import "media"
+
+//Load Libs SASS
+@import "app/libs/animate/animate.sass"
+@import "app/libs/font-awesome/scss/font-awesome"
