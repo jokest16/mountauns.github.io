@@ -1,6 +1,21 @@
-
 $(document).ready(function() {
 	new WOW().init();
+	if (screen.width <= 992){
+		$('.top-pannel').hide();
+		$(".toggle-mnu").click(function() {
+			$('.top-pannel').slideDown();
+			$('.top-line').hide();
+			$(".toggle-mnu").hide();
+			$('.close-menu').on('click',function (){
+				$('.top-pannel').slideUp();
+				$('.top-line').show();
+				$(".toggle-mnu").show();
+			})
+	  	return false;
+		});
+	}else {
+		$('.top-pannel').show();
+	}
 	$('input[type="button"]').on('click',function () {
 		var email = $('input[type="email"]').val();
 		var adr_pattern=/[0-9a-z_-]+@[0-9a-z_]+\.[a-z]{2,5}/i;//

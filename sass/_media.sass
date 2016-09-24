@@ -1,124 +1,328 @@
 @import "bourbon"
 
-/*==========	Desktop First Method	==========*/
+/*==========  Desktop First Method  ==========*/
 
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1200px)
-	/**/
+  /**/
 
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px)
-	/**/
+  /**/
 
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
-	header
-		background-position: 50%
-		nav
-			font-size: em(11px)!important
-			li
-				padding-left: 5px!important
-			.button-head
-				padding: 5px 10px!important
-	.about
-		img
-			width: 80%!important
-	.journal
-		padding-left: 50px
-		.col-md-4
-			width: 250px!important
-			background-size: cover!important
-			.img
-				width: 60%!important
-	.scheme
-		padding-right: 100px
-		.line
-			width: 70%
-			&-small
-				left: -15px
-		.item
-			&-circle
-				&-polygon
-					left: 3px!important
-		.numbers
-			margin-left: -10px
-	.travel
-		background-position: 0%
-		.item
-			&-text
-				font-size: em(13px)
-				.h3
-					font-size: em(20px)
-			&-price
-	      width: 100px
-	      padding: 10px
-	      .second
-	        margin-left: 15%
-	        font-family: "OpenSansExtraBold",sans-serif
-	.logos
+  header
+    background-position: 50%
+    .top-pannel
+    nav
+      font-size: em(11px)!important
+      li
+        padding-left: 5px!important
+      .button-head
+        padding: 5px 10px!important
+    .head-content::before
+      display: none
+  .about
+    img
+      width: 80%!important
+  .journal
+    padding-left: 50px
+    .toggle-item
+      font-size: em(11px)
+      width: 130px
+    .triangle
+      top: -36px!important
+    .col-md-4
+      width: 250px!important
+      background-size: cover!important
+      .img
+        width: 60%!important
+      .img-hover
+        top: 35%
+        left: 26.3%
+  .scheme
+    padding-right: 100px
+    .line
+      width: 70%
+      &-small
+        left: -15px
+    .item
+      &-circle
+        &-polygon
+          left: 3px!important
+    .numbers
+      margin-left: -10px
+  .travel
+    background-position: 0%
+    .item
+      &-text
+        font-size: em(13px)
+        .h3
+          font-size: em(20px)
+      &-price
+        width: 100px
+        padding: 10px
+        .second
+          margin-left: 15%
+          font-family: "OpenSansExtraBold",sans-serif
+  .logos
     .logos-item:first-child
       margin-right: 38px!important
-	footer
-	  .social
-	    margin-top: 479px
-			.buttons
-				margin-right: 160px
-	/*Disable Animation on Mobile Devices*/
-	.animated
-		/*CSS transitions*/
-		-o-transition-property: none !important
-		-moz-transition-property: none !important
-		-ms-transition-property: none !important
-		-webkit-transition-property: none !important
-		transition-property: none !important
-		/*CSS transforms*/
-		-o-transform: none !important
-		-moz-transform: none !important
-		-ms-transform: none !important
-		-webkit-transform: none !important
-		transform: none !important
-		/*CSS animations*/
-		-webkit-animation: none !important
-		-moz-animation: none !important
-		-o-animation: none !important
-		-ms-animation: none !important
-		animation: none !important
+  footer
+    .social
+      margin-top: 479px
+      .buttons
+        margin-right: 160px
+  /*Disable Animation on Mobile Devices*/
+  .animated
+    /*CSS transitions*/
+    -o-transition-property: none !important
+    -moz-transition-property: none !important
+    -ms-transition-property: none !important
+    -webkit-transition-property: none !important
+    transition-property: none !important
+    /*CSS transforms*/
+    -o-transform: none !important
+    -moz-transform: none !important
+    -ms-transform: none !important
+    -webkit-transform: none !important
+    transform: none !important
+    /*CSS animations*/
+    -webkit-animation: none !important
+    -moz-animation: none !important
+    -o-animation: none !important
+    -ms-animation: none !important
+    animation: none !important
 
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px)
-	/**/
+    header
+      background-position: 0% 50%
+      nav
+        .button-head
+            position: absolute
+            top: 15px
+            left: -990%
+      .head-content
+        border: 3px solid #fff
+        .row
+          &-1
+            font-size: em(27px)
+          &-2
+            font-size: em(27px)
+    .about
+      .vave
+        width: 40%
+      .img-1
+        display: none
+      .img-2
+        display: none
+    .journal
+      padding-left: 0px
+      .vave
+        margin-top: 35px
+      .slide-togle
+        margin-bottom: 30px
+        padding-left: 25%
+        .img
+          left: 15%
+        .toggle-item
+          left: -5%
+          width: 100%
+        .triangle
+          left: 65%!important
+    .offer
+      padding-top: 30px
+      input
+        font-size: em(10px)
+        &[type='text']
+          padding: 15px 0px 15px 10px!important
+        &[type='tel']
+          padding: 0px 0px 0 10px!important
+        &[type="submit"]
+          padding: 10px 5px!important
+    .scheme
+      padding-right: 0px
+      padding-top: 30px
+      .item
+        h3
+          margin-right: 0
+        p
+          margin-right: 0
+        .line-small
+          display: none
+        &-circle
+          margin: 0px 0 0 25%
+          width: 55%
+          &-polygon
+            left: 20%!important
+      .num-xs
+        position: absolute
+        .numbers
+          margin:
+            bottom: 300px!important
+            top: 0px
+    .travel
+      background-size: cover
+      .item
+        margin-left: 11%
+        margin-bottom: 20px
+        &-price
+          padding-left: 15px
+          .second
+            margin-left: 100%
+        &-text
+          padding:
+            bottom: 75px
+    .logos
+      .logos-row
+        flex-flow: column
+        align-items: center
+        padding: 5px
+        .logos-item
+          margin-bottom: 10px
+    .contacts
+      background-size: cover
+      font-size: em(14px)
+      .comment
+        color: #000
+    .send
+      top: 270px!important
+    footer
+      .social
+        margin-top: 125%
+        .phone
+          font-size: em(16px)!important
+          text-align: left
 
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 320px)
-	/**/
-
-
-/*==========	Mobile First Method	==========*/
+  header
+    background-position: 0% 50%
+    nav
+      ul
+        li
+          a
+            padding-bottom: 0px
+      .button-head
+          position: absolute
+          top: 15px
+          left: -900%
+          margin-bottom: 0px!important
+    .head-content
+      border: 3px solid #fff
+      .row
+        &-1
+          font-size: em(27px)
+        &-2
+          font-size: em(27px)
+  .about
+    .vave
+      width: 40%
+    .img-1
+      display: none
+    .img-2
+      display: none
+  .journal
+    padding-left: 0px
+    .vave
+      margin-top: 35px
+    .slide-togle
+      margin-bottom: 30px
+      padding-left: 45px
+      .img
+        left: 15%
+      .toggle-item
+        left: -5%
+        width: 100%
+      .triangle
+        left: 65%!important
+  .offer
+    padding-top: 30px
+    input
+      font-size: em(10px)
+      &[type='text']
+        padding: 15px 0px 15px 10px!important
+      &[type='tel']
+        padding: 0px 0px 0 10px!important
+      &[type="submit"]
+        padding: 10px 5px!important
+  .scheme
+    padding-right: 0px
+    padding-top: 30px
+    .item
+      margin-left: 3%
+      .line-small
+        display: none
+      &-circle
+        margin: 0px 0 0 15%
+        width: 70%
+        &-polygon
+          left: 20%!important
+    .num-xs
+      position: absolute
+      .numbers
+        margin:
+          bottom: 300px!important
+          top: 0px
+  .travel
+    background-size: cover
+    .item
+      margin-bottom: 20px
+      &-price
+        padding-left: 15px
+        .second
+          margin-left: 100%
+      &-text
+        padding:
+          bottom: 75px
+  .logos
+    .logos-row
+      flex-flow: column
+      align-items: center
+      padding: 5px
+      .logos-item
+        margin-bottom: 10px
+  .contacts
+    background-size: cover
+    font-size: em(14px)
+    .comment
+      color: #000
+  .send
+    top: 270px!important
+  footer
+    .social
+      margin-top: 400px
+      .phone
+        font-size: em(16px)!important
+        text-align: left
+/*==========  Mobile First Method  ==========*/
 
 /* Custom, iPhone Retina */
 @media only screen and (min-width : 320px)
-	/**/
+  /**/
 
 
 /* Extra Small Devices, Phones */
 @media only screen and (min-width : 480px)
-	/**/
+  /**/
 
 
 /* Small Devices, Tablets */
 @media only screen and (min-width : 768px)
-	/**/
+  /**/
 
 
 /* Medium Devices, Desktops */
 @media only screen and (min-width : 992px)
-	/**/
+  /**/
 
 
 /* Large Devices, Wide Screens */
 @media only screen and (min-width : 1200px)
-	/**/
+  /**/

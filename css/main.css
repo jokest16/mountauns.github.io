@@ -404,7 +404,7 @@ body textarea:required:valid {
   color: #666; }
 
 .about {
-  background: url(../img/about-bg.jpg);
+  background: url(../img/about-bg.jpg) no-repeat 50% 50%;
   width: 100%;
   height: auto;
   padding-bottom: 150px;
@@ -449,7 +449,7 @@ body textarea:required:valid {
     text-align: center; }
   .journal .slide-togle .img {
     min-height: 380px;
-    width: 100%;
+    width: 80%;
     position: relative; }
     .journal .slide-togle .img:hover .img-hover {
       opacity: 1; }
@@ -481,7 +481,7 @@ body textarea:required:valid {
     right: 0; }
 
 .offer {
-  background: url(../img/ofter-bg.jpg) no-repeat;
+  background: url(../img/ofter-bg.jpg) no-repeat 50% 50%;
   padding-top: 130px;
   padding-bottom: 239px; }
   .offer form .form-order {
@@ -578,7 +578,7 @@ body textarea:required:valid {
         min-height: 140px;
         min-width: 130px;
         background-color: transparent;
-        background: url("../img/polygon.png") no-repeat;
+        background: url(../img/polygon.png) no-repeat;
         z-index: 5; }
         .scheme .item-circle-polygon:hover {
           -webkit-transform: rotate(360deg);
@@ -605,7 +605,7 @@ body textarea:required:valid {
       margin-bottom: 100px; }
 
 .travel {
-  background: url(../img/travel-bg.jpg) no-repeat -10% -3.5%; }
+  background: url(../img/travel-bg.jpg) no-repeat 50% 50%; }
   .travel .col-md-3 {
     width: 20%; }
   .travel .vave {
@@ -816,7 +816,7 @@ footer .social {
     font-family: "OpenSansExtraBold", sans-serif;
     font-size: 1.6875em; }
 
-/*==========	Desktop First Method	==========*/
+/*==========  Desktop First Method  ==========*/
 /* Large Devices, Wide Screens */
 @media only screen and (max-width: 1200px) {
   /**/ }
@@ -835,15 +835,25 @@ footer .social {
         padding-left: 5px !important; }
       header nav .button-head {
         padding: 5px 10px !important; }
+    header .head-content::before {
+      display: none; }
   .about img {
     width: 80% !important; }
   .journal {
     padding-left: 50px; }
+    .journal .toggle-item {
+      font-size: 0.6875em;
+      width: 130px; }
+    .journal .triangle {
+      top: -36px !important; }
     .journal .col-md-4 {
       width: 250px !important;
       background-size: cover !important; }
       .journal .col-md-4 .img {
         width: 60% !important; }
+      .journal .col-md-4 .img-hover {
+        top: 35%;
+        left: 26.3%; }
   .scheme {
     padding-right: 100px; }
     .scheme .line {
@@ -870,8 +880,8 @@ footer .social {
     margin-right: 38px !important; }
   footer .social {
     margin-top: 479px; }
-  footer .buttons {
-    margin-right: 160px; }
+    footer .social .buttons {
+      margin-right: 160px; }
   /*Disable Animation on Mobile Devices*/
   .animated {
     /*CSS transitions*/
@@ -887,13 +897,203 @@ footer .social {
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width: 480px) {
-  /**/ }
+  header {
+    background-position: 0% 50%; }
+    header nav .button-head {
+      position: absolute;
+      top: 15px;
+      left: -990%; }
+    header .head-content {
+      border: 3px solid #fff; }
+      header .head-content .row-1 {
+        font-size: 1.6875em; }
+      header .head-content .row-2 {
+        font-size: 1.6875em; }
+  .about .vave {
+    width: 40%; }
+  .about .img-1 {
+    display: none; }
+  .about .img-2 {
+    display: none; }
+  .journal {
+    padding-left: 0px; }
+    .journal .vave {
+      margin-top: 35px; }
+    .journal .slide-togle {
+      margin-bottom: 30px;
+      padding-left: 25%; }
+      .journal .slide-togle .img {
+        left: 15%; }
+      .journal .slide-togle .toggle-item {
+        left: -5%;
+        width: 100%; }
+      .journal .slide-togle .triangle {
+        left: 65% !important; }
+  .offer {
+    padding-top: 30px; }
+    .offer input {
+      font-size: 0.625em; }
+      .offer input[type='text'] {
+        padding: 15px 0px 15px 10px !important; }
+      .offer input[type='tel'] {
+        padding: 0px 0px 0 10px !important; }
+      .offer input[type="submit"] {
+        padding: 10px 5px !important; }
+  .scheme {
+    padding-right: 0px;
+    padding-top: 30px; }
+    .scheme .item h3 {
+      margin-right: 0; }
+    .scheme .item p {
+      margin-right: 0; }
+    .scheme .item .line-small {
+      display: none; }
+    .scheme .item-circle {
+      margin: 0px 0 0 25%;
+      width: 55%; }
+      .scheme .item-circle-polygon {
+        left: 20% !important; }
+    .scheme .num-xs {
+      position: absolute; }
+      .scheme .num-xs .numbers {
+        margin-bottom: 300px !important;
+        margin-top: 0px; }
+  .travel {
+    background-size: cover; }
+    .travel .item {
+      margin-left: 11%;
+      margin-bottom: 20px; }
+      .travel .item-price {
+        padding-left: 15px; }
+        .travel .item-price .second {
+          margin-left: 100%; }
+      .travel .item-text {
+        padding-bottom: 75px; }
+  .logos .logos-row {
+    -webkit-flex-flow: column;
+        -ms-flex-flow: column;
+            flex-flow: column;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+                -ms-grid-row-align: center;
+            align-items: center;
+    padding: 5px; }
+    .logos .logos-row .logos-item {
+      margin-bottom: 10px; }
+  .contacts {
+    background-size: cover;
+    font-size: 0.875em; }
+    .contacts .comment {
+      color: #000; }
+  .send {
+    top: 270px !important; }
+  footer .social {
+    margin-top: 125%; }
+    footer .social .phone {
+      font-size: 1em !important;
+      text-align: left; } }
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width: 320px) {
-  /**/ }
+  header {
+    background-position: 0% 50%; }
+    header nav ul li a {
+      padding-bottom: 0px; }
+    header nav .button-head {
+      position: absolute;
+      top: 15px;
+      left: -900%;
+      margin-bottom: 0px !important; }
+    header .head-content {
+      border: 3px solid #fff; }
+      header .head-content .row-1 {
+        font-size: 1.6875em; }
+      header .head-content .row-2 {
+        font-size: 1.6875em; }
+  .about .vave {
+    width: 40%; }
+  .about .img-1 {
+    display: none; }
+  .about .img-2 {
+    display: none; }
+  .journal {
+    padding-left: 0px; }
+    .journal .vave {
+      margin-top: 35px; }
+    .journal .slide-togle {
+      margin-bottom: 30px;
+      padding-left: 45px; }
+      .journal .slide-togle .img {
+        left: 15%; }
+      .journal .slide-togle .toggle-item {
+        left: -5%;
+        width: 100%; }
+      .journal .slide-togle .triangle {
+        left: 65% !important; }
+  .offer {
+    padding-top: 30px; }
+    .offer input {
+      font-size: 0.625em; }
+      .offer input[type='text'] {
+        padding: 15px 0px 15px 10px !important; }
+      .offer input[type='tel'] {
+        padding: 0px 0px 0 10px !important; }
+      .offer input[type="submit"] {
+        padding: 10px 5px !important; }
+  .scheme {
+    padding-right: 0px;
+    padding-top: 30px; }
+    .scheme .item {
+      margin-left: 3%; }
+      .scheme .item .line-small {
+        display: none; }
+      .scheme .item-circle {
+        margin: 0px 0 0 15%;
+        width: 70%; }
+        .scheme .item-circle-polygon {
+          left: 20% !important; }
+    .scheme .num-xs {
+      position: absolute; }
+      .scheme .num-xs .numbers {
+        margin-bottom: 300px !important;
+        margin-top: 0px; }
+  .travel {
+    background-size: cover; }
+    .travel .item {
+      margin-bottom: 20px; }
+      .travel .item-price {
+        padding-left: 15px; }
+        .travel .item-price .second {
+          margin-left: 100%; }
+      .travel .item-text {
+        padding-bottom: 75px; }
+  .logos .logos-row {
+    -webkit-flex-flow: column;
+        -ms-flex-flow: column;
+            flex-flow: column;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+                -ms-grid-row-align: center;
+            align-items: center;
+    padding: 5px; }
+    .logos .logos-row .logos-item {
+      margin-bottom: 10px; }
+  .contacts {
+    background-size: cover;
+    font-size: 0.875em; }
+    .contacts .comment {
+      color: #000; }
+  .send {
+    top: 270px !important; }
+  footer .social {
+    margin-top: 400px; }
+    footer .social .phone {
+      font-size: 1em !important;
+      text-align: left; } }
 
-/*==========	Mobile First Method	==========*/
+/*==========  Mobile First Method  ==========*/
 /* Custom, iPhone Retina */
 @media only screen and (min-width: 320px) {
   /**/ }
